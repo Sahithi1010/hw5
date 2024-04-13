@@ -116,31 +116,31 @@ def question6():
     answers = {}
 
     # type: eval_float
-    answers['(a) C1-TPR'] = None
+    answers['(a) C1-TPR'] = 'p'
 
     # type: eval_float
-    answers['(a) C2-TPR'] = None
+    answers['(a) C2-TPR'] = '2p'
 
     # type: eval_float
-    answers['(a) C1-FPR'] = None
+    answers['(a) C1-FPR'] = 'p'
 
     # type: eval_float
-    answers['(a) C2-FPR'] = None
+    answers['(a) C2-FPR'] = '2p'
 
     # type: string
     # Hint: The random guess line in an ROC curve corresponds to TPR=FPR.
     # choices: ['yes', 'no']
-    answers['(b) C2 better classifier than C1?'] = None
+    answers['(b) C2 better classifier than C1?'] = 'no'
 
     # type: explain_string
-    answers['(b) C2 better classifier than C1? Explain'] = None
+    answers['(b) C2 better classifier than C1? Explain'] = 'Both classifiers TPR and FPR are equal, and they both fall on the ROC curves random guess line, suggesting that none is superior than chance.'
 
     # type: string
     # choices: ['TPR/FPR', 'precision/recall']
-    answers['(c) Which metric?'] = None
+    answers['(c) Which metric?'] = 'C2'
 
     # type: explain_string
-    answers['(c) explain'] = None
+    answers['(c) explain'] = 'With the same precision, C2 may be recovering more true positives than the total number of actual positives if it has a higher recall compared to the other classifier.'
     return answers
 
 
@@ -202,18 +202,19 @@ def question9():
 
     # type: dict[string,float]
     # keys: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) metrics'] = None
+    answers['(i) metrics'] = ['recall': 0.5333, 'precision': 0.6154, 'F-measure': 0.5709, 'accuracy': 0.88]
 
     # type: string
     # choices: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) best metric?'] = None
+    answers['(i) best metric?'] = 'accuracy'
 
     # type: string
     # choices: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) worst metric?'] = None
+    answers['(i) worst metric?'] = 'precision'
 
     # type: explain_string
-    answers['(ii) Explain your choices of best and worst metrics'] = None
+    answers['(ii) Explain your choices of best and worst metrics'] = 'precision: The large proportion of genuine negatives, which is noteworthy for the negative class that predominates in the dataset, is not taken into consideration. '
+                                                                     'accuracy: It provides a measure of accurate predictions across all classes by taking into account both true positives and true negatives.'
     return answers
 
 
@@ -223,21 +224,21 @@ def question10():
 
     # type: string
     # choices: ['T1', 'T2']
-    answers['(a) better test based on F-measure?'] = None
+    answers['(a) better test based on F-measure?'] = 'T1'
 
     # type: string
     # choices: ['T1', 'T2']
-    answers['(b) better test based on TPR/FPR?'] = None
+    answers['(b) better test based on TPR/FPR?'] = 'T2'
 
     # type: string
     # choices: ['F1', 'TPR/FPR']
-    answers['(c) Which evaluation measure to use between the two tests?'] = None
+    answers['(c) Which evaluation measure to use between the two tests?'] = 'TPR/FPR'
 
     # type: explain_string
-    answers['(c) Which evaluation measure? Explain'] = None
+    answers['(c) Which evaluation measure? Explain'] = 'It might be more important to be able to accurately identify true positives (sensitivity or TPR) without triggering a lot of false alarms (FPR).'
 
     # type: explain_string
-    answers['(d) Example scenario where you would reverse choise in (c)'] = None
+    answers['(d) Example scenario where you would reverse choise in (c)'] = 'If there were more serious repercussions for false positive results, such a test that, if positive, led to extremely harsh and detrimental treatment.'
     return answers
 #-----------------------------------------------------------
 if __name__ == '__main__':
