@@ -10,15 +10,15 @@ def question1():
 
     # type: float
     # Calculate the probability.
-    answers['(a)'] = None
+    answers['(a)'] = 0.0288
 
     # type: float
     # Calculate the probability.
-    answers['(b)'] = None
+    answers['(b)'] = 0.002
 
     # type: float
     # Calculate the probability.
-    answers['(c)'] = None
+    answers['(c)'] = 0.92
     return answers
 
 
@@ -67,10 +67,10 @@ def question3():
     answers = {}
 
     # type: string
-    answers['Agree?'] = None
+    answers['Agree?'] = 'No'
 
     # type: explain_string
-    answers['Explain'] = None
+    answers['Explain'] = 'The reason Alan coin-flipping method is invalid is that it lacks predictive capacity and does not take use of any patterns in the data. Coin flips are completely random and provide no benefit over guesswork, but effective ensemble approaches rely on combining individual predictors that are better than random chance.'
     return answers
 
 
@@ -79,13 +79,13 @@ def question4():
     answers = {}
 
     # type: bool
-    answers['(a) e=0.5, independent'] = None
+    answers['(a) e=0.5, independent'] = False
 
     # type: bool
-    answers['(b), independent'] = None
+    answers['(b), independent'] = True
 
     # type: bool
-    answers['(c) identical'] = None
+    answers['(c) identical'] = False
     return answers
 
 
@@ -95,19 +95,19 @@ def question5():
 
     # type: string
     # choices: ['i', 'ii', 'iii', 'iv']
-    answers['(a)'] = None
+    answers['(a)'] = 'iii'
 
     # type: string
     # choices: ['i', 'ii', 'iii', 'iv']
-    answers['(b)'] = None
+    answers['(b)'] = 'i'
 
     # type: string
     # choices: ['i', 'ii', 'iii', 'iv']
-    answers['(c)'] = None
+    answers['(c)'] = 'ii'
 
     # type: string
     # choices: ['i', 'ii', 'iii', 'iv']
-    answers['(d)'] = None
+    answers['(d)'] = 'iv'
     return answers
 
 
