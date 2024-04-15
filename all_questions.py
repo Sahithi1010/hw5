@@ -27,28 +27,28 @@ def question2():
     answers = {}
 
     # type: bool
-    answers['(a) A'] = None
+    answers['(a) A'] = True
 
     # type: bool
-    answers['(a) B'] = None
+    answers['(a) B'] = False
 
     # type: bool
-    answers['(a) C'] = None
+    answers['(a) C'] = False
 
     # type: bool
-    answers['(a) D'] = None
+    answers['(a) D'] = True
 
     # type: bool
-    answers['(b) A'] = None
+    answers['(b) A'] = True
 
     # type: False
-    answers['(b) B'] = None
+    answers['(b) B'] = False
 
     # type: bool
-    answers['(b) C'] = None
+    answers['(b) C'] = True
 
     # type: bool
-    answers['(b) D'] = None
+    answers['(b) D'] = False
 
     # type: eval_float
     # The formulas should only use the variable 'p'. The formulas should be
@@ -116,7 +116,7 @@ def question6():
     answers = {}
 
     # type: eval_float
-    answers['(a) C1-TPR'] = 'p'
+    answers['(a) C1-TPR'] = None
 
     # type: eval_float
     answers['(a) C2-TPR'] = '2p'
@@ -150,24 +150,24 @@ def question7():
 
     # type: string
     # choices: ['C1', 'C2', 'None']
-    answers['(i) Best classifier?'] = None
+    answers['(i) Best classifier?'] = 'C2'
 
     # type: explain_string
-    answers['(i) Best classifier, explain'] = None
+    answers['(i) Best classifier, explain'] = 'C2 is a better option for this classification assignment because it strikes a better balance between precision and recall.'
 
     # type: string
     # choices: ['TPR-FPR', 'precision-recall-F1-Measure']
-    answers['(ii) appropriate metric pair'] = None
+    answers['(ii) appropriate metric pair'] = 'precesion-recall-F1-Measure'
 
     # type: explain_string
-    answers['(ii) appropriate metric pair, explain'] = None
+    answers['(ii) appropriate metric pair, explain'] = 'When combined, they offer a thorough evaluation of a classifiers performance that takes into account both the true positive rate (TPR) and the false positive rate (FPR). '
 
     # type: string
     # choices: ['C1', 'C2', 'C3']
-    answers['(iii) preferred classifier?'] = None
+    answers['(iii) preferred classifier?'] = 'C3'
 
     # type: explain_string
-    answers['(iii) best classifier, explain'] = None
+    answers['(iii) best classifier, explain'] = 'It has higher precision, reasonable recall, and F1-measure, while also maintaining a lower false positive rate.'
     return answers
 
 
@@ -176,17 +176,17 @@ def question8():
     answers = {}
 
     # type: eval_float
-    answers['(a) precision for C0'] = None
+    answers['(a) precision for C0'] = 0.1
 
     # type: eval_float
-    answers['(a) recall for C0'] = None
+    answers['(a) recall for C0'] = 'p'
 
     # type: eval_float
-    answers['(b) F-measure of C0'] = None
+    answers['(b) F-measure of C0'] = '2 * (0.1 * p) / (0.1 + p)'
 
     # type: string
     # choices: ['yes', 'no', 'unknown']
-    answers['C1 better than random?'] = None
+    answers['C1 better than random?'] = 'yes'
 
     # type: float
     # What is the range of p for which C1 is better than random?  What is
@@ -202,7 +202,7 @@ def question9():
 
     # type: dict[string,float]
     # keys: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) metrics'] = ['recall': 0.5333, 'precision': 0.6154, 'F-measure': 0.5709, 'accuracy': 0.88]
+    answers['(i) metrics'] = None#['recall': 0.5333, 'precision': 0.6154, 'F-measure': 0.5709, 'accuracy': 0.88]
 
     # type: string
     # choices: ['recall', 'precision', 'F-measure', 'accuracy']
