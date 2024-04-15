@@ -70,7 +70,7 @@ def question3():
     answers['Agree?'] = "Disagree"
 
     # type: explain_string
-    answers['Explain'] = "Random guessing, such as flipping a coin, is not useful for making predictions and does not constitute a valid ensemble method for stock market prediction."
+    answers['Explain'] = "The reason Alan coin-flipping method is invalid is that it lacks predictive capacity and does not take use of any patterns in the data. Coin flips are completely random and provide no benefit over guesswork, but effective ensemble approaches rely on combining individual predictors that are better than random chance."
     return answers
 
 
