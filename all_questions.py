@@ -134,14 +134,14 @@ def question6():
     answers['(b) C2 better classifier than C1?'] = 'no'
 
     # type: explain_string
-    answers['(b) C2 better classifier than C1? Explain'] = "increasing the prediction probability to (2p ) does not confer any advantage to C2; it simply means that C2 will predict more positive classes, both true positives and false positives, but does not improve the classifier's accuracy or its ability to discriminate between the classes better than random guessing."
+    answers['(b) C2 better classifier than C1? Explain'] = "Both classifiers TPR and FPR are equal, and they both fall on the ROC curves random guess line, suggesting that none is superior than chance."
 
     # type: string
     # choices: ['TPR/FPR', 'precision/recall']
     answers['(c) Which metric?'] = 'TPR/FPR'
 
     # type: explain_string
-    answers['(c) explain'] = "While C2 seems to have better recall, its equal precision and higher false positive rate indicate that it doesn't actually outperform C1; both classifiers appear equally effective (or ineffective) as random guessers."
+    answers['(c) explain'] = "With the same precision, TPR/FPR may be recovering more true positives than the total number of actual positives if it has a higher recall compared to the other classifier."
     return answers
 
 
@@ -155,21 +155,21 @@ def question7():
     answers['(i) Best classifier?'] = 'C2'
 
     # type: explain_string
-    answers['(i) Best classifier, explain'] = " C2 has a higher recall and F1-measure than C1 but also a higher FPR, indicating a more aggressive classifier that catches more positives"
+    answers['(i) Best classifier, explain'] = "C2 is a better option for this classification assignment because it strikes a better balance between precision and recall."
 
     # type: string
     # choices: ['TPR-FPR', 'precision-recall-F1-Measure']
     answers['(ii) appropriate metric pair'] = 'precision-recall-F1-Measure'
 
     # type: explain_string
-    answers['(ii) appropriate metric pair, explain'] = "The {precision, recall, F1-measure} metric pair is more informative for evaluating C1 and C2 as it balances the importance of correctly predicting positives and minimizing incorrect positive predictions in imbalanced datasets."
+    answers['(ii) appropriate metric pair, explain'] = "When combined, they offer a thorough evaluation of a classifiers performance that takes into account both the TPR and the FPR."
 
     # type: string
     # choices: ['C1', 'C2', 'C3']
     answers['(iii) preferred classifier?'] = 'C3'
 
     # type: explain_string
-    answers['(iii) best classifier, explain'] = "C3 is preferable for its high precision and low false positive rate, making it ideal when accurate positive predictions are critical and false positives are costly."
+    answers['(iii) best classifier, explain'] = "It has higher precision, reasonable recall, and F1-measure, while also maintaining a lower false positive rate."
     return answers
 
 
@@ -204,18 +204,18 @@ def question9():
 
     # type: dict[string,float]
     # keys: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) metrics'] = None
+    answers['(i) metrics'] = None #['recall': 0.5333, 'precision': 0.6154, 'F-measure': 0.5709, 'accuracy': 0.88]
 
     # type: string
     # choices: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) best metric?'] = 'precision'
+    answers['(i) best metric?'] = 'accuracy'
 
     # type: string
     # choices: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) worst metric?'] = 'accuracy'
+    answers['(i) worst metric?'] = 'precision'
 
     # type: explain_string
-    answers['(ii) Explain your choices of best and worst metrics'] = "Accuracy is misleading in imbalanced datasets, while F-measure provides a more reliable performance indicator by balancing precision and recall."
+    answers['(ii) Explain your choices of best and worst metrics'] = "precision: The large proportion of genuine negatives, which is noteworthy for the negative class that predominates in the dataset, is not taken into consideration, accuracy: It provides a measure of accurate predictions across all classes by taking into account both true positives and true negatives."
     return answers
 
 
@@ -239,7 +239,7 @@ def question10():
     answers['(c) Which evaluation measure? Explain'] = "If it's more important to have a balanced view of the test’s precision and recall, perhaps because the consequences of false positives and false negatives are equally concerning, then the F1-Score is the more appropriate measure."
 
     # type: explain_string
-    answers['(d) Example scenario where you would reverse choise in (c)'] = "If minimizing false positives is crucial (for example, to avoid unnecessary anxiety or invasive follow-up tests), then the TPR/FPR ratio would be more important, suggesting T2 might be preferable despite its lower F1-Score."
+    answers['(d) Example scenario where you would reverse choise in (c)'] = "If there were more serious repercussions for false positive results, such a test that, if positive, led to extremely harsh and detrimental treatment."
     return answers
 #-----------------------------------------------------------
 if __name__ == '__main__':
