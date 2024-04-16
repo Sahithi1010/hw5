@@ -10,7 +10,7 @@ def question1():
 
     # type: float
     # Calculate the probability.
-    answers['(a)'] = 0.0028
+    answers['(a)'] = 0.0288
 
     # type: float
     # Calculate the probability.
@@ -18,7 +18,7 @@ def question1():
 
     # type: float
     # Calculate the probability.
-    answers['(c)'] = 0.9200 #0.8000
+    answers['(c)'] = 0.0080
     return answers
 
 
@@ -54,11 +54,11 @@ def question2():
     # The formulas should only use the variable 'p'. The formulas should be
     # a valid Python expression. Use the functions in the math module as
     # required.
-    answers['(c) Weight update'] = "0.424p"
+    answers['(c) Weight update'] = "0.5 * math.log((1 - 0.3) / 0.3)"
 
     # type: float
     # the answer should be correct to 3 significant digits
-    answers['(d) Weight influence'] = 1.528
+    answers['(d) Weight influence'] = 1.5275
     return answers
 
 
@@ -67,7 +67,7 @@ def question3():
     answers = {}
 
     # type: string
-    answers['Agree?'] = "Disagree"
+    answers['Agree?'] = "No"
 
     # type: explain_string
     answers['Explain'] = "The reason Alan coin-flipping method is invalid is that it lacks predictive capacity and does not take use of any patterns in the data. Coin flips are completely random and provide no benefit over guesswork, but effective ensemble approaches rely on combining individual predictors that are better than random chance."
@@ -120,25 +120,25 @@ def question6():
     answers['(a) C1-TPR'] = "p"
 
     # type: eval_float
-    answers['(a) C2-TPR'] = "2p"
+    answers['(a) C2-TPR'] = "2*p"
 
     # type: eval_float
     answers['(a) C1-FPR'] = "p"
 
     # type: eval_float
-    answers['(a) C2-FPR'] = "2p"
+    answers['(a) C2-FPR'] = "2*p"
 
     # type: string
     # Hint: The random guess line in an ROC curve corresponds to TPR=FPR.
     # choices: ['yes', 'no']
-    answers['(b) C2 better classifier than C1?'] = 'no'
+    answers['(b) C2 better classifier than C1?'] = 'yes'
 
     # type: explain_string
     answers['(b) C2 better classifier than C1? Explain'] = "Both classifiers TPR and FPR are equal, and they both fall on the ROC curves random guess line, suggesting that none is superior than chance."
 
     # type: string
     # choices: ['TPR/FPR', 'precision/recall']
-    answers['(c) Which metric?'] = 'TPR/FPR'
+    answers['(c) Which metric?'] = 'precision/recall'
 
     # type: explain_string
     answers['(c) explain'] = "With the same precision, TPR/FPR may be recovering more true positives than the total number of actual positives if it has a higher recall compared to the other classifier."
@@ -178,17 +178,16 @@ def question8():
     answers = {}
 
     # type: eval_float
-    answers['(a) precision for C0'] = "0.1 * p"
+    answers['(a) precision for C0'] = "0.1"
 
     # type: eval_float
-    answers['(a) recall for C0'] = "1 * p"
+    answers['(a) recall for C0'] = "p"
 
     # type: eval_float
-    answers['(b) F-measure of C0'] = "2 * ((0.1 * p) / (0.1 + p))"
-
+    answers['(b) F-measure of C0'] = '(0.2 * p) / (0.1 + p)'
     # type: string
     # choices: ['yes', 'no', 'unknown']
-    answers['C1 better than random?'] = 'yes'
+    answers['C1 better than random?'] = 'no'
 
     # type: float
     # What is the range of p for which C1 is better than random?  What is
@@ -204,18 +203,22 @@ def question9():
 
     # type: dict[string,float]
     # keys: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) metrics'] = None #['recall': 0.5333, 'precision': 0.6154, 'F-measure': 0.5709, 'accuracy': 0.88]
+    answers['(i) metrics'] = {
+    'recall': 0.5333,
+    'precision': 0.6154,
+    'F-measure': 0.5689,
+    'accuracy': 0.8800
+}
+    # type: string
+    # choices: ['recall', 'precision', 'F-measure', 'accuracy']
+    answers['(i) best metric?'] = 'F-measure'
 
     # type: string
     # choices: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) best metric?'] = 'accuracy'
-
-    # type: string
-    # choices: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) worst metric?'] = 'precision'
+    answers['(i) worst metric?'] = 'accuracy'
 
     # type: explain_string
-    answers['(ii) Explain your choices of best and worst metrics'] = "precision: The large proportion of genuine negatives, which is noteworthy for the negative class that predominates in the dataset, is not taken into consideration, accuracy: It provides a measure of accurate predictions across all classes by taking into account both true positives and true negatives."
+    answers['(ii) Explain your choices of best and worst metrics'] = "F-measure: The large proportion of genuine negatives, which is noteworthy for the negative class that predominates in the dataset, is not taken into consideration, accuracy: It provides a measure of accurate predictions across all classes by taking into account both true positives and true negatives."
     return answers
 
 
@@ -233,7 +236,7 @@ def question10():
 
     # type: string
     # choices: ['F1', 'TPR/FPR']
-    answers['(c) Which evaluation measure to use between the two tests?'] = 'F1'
+    answers['(c) Which evaluation measure to use between the two tests?'] = "TPR/FPR"
 
     # type: explain_string
     answers['(c) Which evaluation measure? Explain'] = "If it's more important to have a balanced view of the test’s precision and recall, perhaps because the consequences of false positives and false negatives are equally concerning, then the F1-Score is the more appropriate measure."
