@@ -54,7 +54,7 @@ def question2():
     # The formulas should only use the variable 'p'. The formulas should be
     # a valid Python expression. Use the functions in the math module as
     # required.
-    answers['(c) Weight update'] = "0.5 * math.log((1 - 0.3) / 0.3)"
+    answers['(c) Weight update'] = "0.5 * math.log((1 - p) / p)"
 
     # type: float
     # the answer should be correct to 3 significant digits
@@ -205,7 +205,7 @@ def question9():
     # keys: ['recall', 'precision', 'F-measure', 'accuracy']
     answers['(i) metrics'] = {
     'recall': 0.5333,
-    'precision': 0.6154,
+    'precision': 0.6153,
     'F-measure': 0.5689,
     'accuracy': 0.8800
 }
@@ -236,7 +236,7 @@ def question10():
 
     # type: string
     # choices: ['F1', 'TPR/FPR']
-    answers['(c) Which evaluation measure to use between the two tests?'] = "TPR/FPR"
+    answers['(c) Which evaluation measure to use between the two tests?'] = "F1"
 
     # type: explain_string
     answers['(c) Which evaluation measure? Explain'] = "If it's more important to have a balanced view of the test’s precision and recall, perhaps because the consequences of false positives and false negatives are equally concerning, then the F1-Score is the more appropriate measure."
